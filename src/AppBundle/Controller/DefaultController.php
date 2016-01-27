@@ -9,13 +9,26 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="home")
      */
-    public function indexAction(Request $request)
+    public function homeAction()
     {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->container->getParameter('kernel.root_dir').'/..'),
-        ]);
+        return $this->render('AppBundle:default:home.html.twig');
+    }
+
+    /**
+     * @Route("/post", name="post")
+     */
+    public function postAction()
+    {
+        return $this->render('AppBundle:default:post.html.twig');
+    }
+
+    /**
+     * @Route("/posts", name="posts")
+     */
+    public function postsAction()
+    {
+        return $this->render('AppBundle:default:posts.html.twig');
     }
 }

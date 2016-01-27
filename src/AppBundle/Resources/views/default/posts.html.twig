@@ -1,0 +1,48 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Blog
+{% endblock title %}
+
+{% block top %}
+    <section id="home">
+        <div id="main-slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img class="img-responsive" src="{{ asset('bundles/app/images/slider/bg4.jpg') }}" alt="slider">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock top %}
+
+{% block content %}
+    <section id="twitter">
+        <div id="twitter-feed" class="carousel slide" data-interval="false">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="blog-post ">
+                        <h2>Blog post 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam sem, tempor vitae enim quis, aliquet hendrerit arcu. Quisque sodales quis turpis sed maximus. Etiam molestie arcu vel placerat tincidunt. Nulla eget fermentum neque, aliquet maximus turpis. Phasellus dictum tempor facilisis.</p>
+                        <a href="{{ path('post') }}" class="btn btn-primary">See the whole post <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="blog-post ">
+                        <h2>Blog post 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam sem, tempor vitae enim quis, aliquet hendrerit arcu. Quisque sodales quis turpis sed maximus. Etiam molestie arcu vel placerat tincidunt. Nulla eget fermentum neque, aliquet maximus turpis. Phasellus dictum tempor facilisis.</p>
+                        <a href="{{ path('post') }}" class="btn btn-primary">See the whole post <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="blog-post ">
+                        <h2>Blog post 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam sem, tempor vitae enim quis, aliquet hendrerit arcu. Quisque sodales quis turpis sed maximus. Etiam molestie arcu vel placerat tincidunt. Nulla eget fermentum neque, aliquet maximus turpis. Phasellus dictum tempor facilisis.</p>
+                        <a href="{{ path('post') }}" class="btn btn-primary">See the whole post <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
